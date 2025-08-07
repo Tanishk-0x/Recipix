@@ -3,6 +3,7 @@ const app = express() ;
 require('dotenv').config() ; 
 const airoute = require('./src/routes/ai.routes'); 
 const {dbconnect} = require('./src/config/database') ; 
+const authRoutes = require('./src/routes/authRoutes') ; 
 
 const PORT = process.env.PORT ; 
 
@@ -10,6 +11,7 @@ app.use(express.json()) ;
 
 // Mounting .. 
 app.use('/ai' , airoute) ; 
+app.use('/auth' , authRoutes) ; 
 
 // calling .. 
 dbconnect() ;

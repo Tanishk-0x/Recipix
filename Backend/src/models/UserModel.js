@@ -45,8 +45,7 @@ const UserSchema = new mongoose.Schema({
     }, 
 
     credits : {
-        type : number , 
-        required : true , 
+        type : Number , 
     }, 
 
     // -----------------------
